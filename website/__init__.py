@@ -22,14 +22,14 @@ def create_app():
     from .views import members_view
     from .views import members_2_view
     from .views import send_view
-    # from .views import messages_view
+    from .views import messages_view
     from .views import thank_you_view
     
     app.register_blueprint(home_view, url_prefix='/')
     app.register_blueprint(members_view, url_prefix='/')
     app.register_blueprint(members_2_view, url_prefix='/')
     app.register_blueprint(send_view, url_prefix='/')
-    # app.register_blueprint(messages_view, url_prefix='/')
+    app.register_blueprint(messages_view, url_prefix='/')
     app.register_blueprint(thank_you_view, url_prefix='/')
     
     with app.app_context():

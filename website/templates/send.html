@@ -4,6 +4,8 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/send.css') }}">
 
-    
+    <div style="display:flex;justify-content:row;align-items:center;flex-direction:column;">
+        <img src="{{ url_for('static', filename='res/employees/svg/' ~ recipient.lower().replace('_', '-') ~ '.svg') }}" alt="" style="width: 200px; height: 200px; margin-top: 50px;">
+    </div>
 
 {% endblock %}

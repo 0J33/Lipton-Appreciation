@@ -25,13 +25,15 @@ send_view = Blueprint('send_view', __name__)
 
 @send_view.route('/send', methods=['GET', 'POST'])
 def home():
-    return render_template('send.html')
+    name = request.args.get('name')
+    return render_template('send.html', recipient=name)
 
-# messages_view = Blueprint('messages_view', __name__)
+messages_view = Blueprint('messages_view', __name__)
 
-# @messages_view('/firstname-lastname', methods=['GET', 'POST'])
-# def messages():
-#     return render_template('messages.html')
+@messages_view.route('/firstname-lastname', methods=['GET', 'POST'])
+@messages_view.route('/firstname2-lastname2', methods=['GET', 'POST'])
+def home():
+    return render_template('messages.html')
 
 thank_you_view = Blueprint('thank_you_view', __name__)
 
