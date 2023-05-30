@@ -47,7 +47,10 @@
 .members-next-mobile {
     display: none;
 }
-
+.employee-svg {
+    width: 6.5rem;
+    height: auto;
+}
 @media only screen and (max-width: 768px) {
     .members-container {
         width: 100%;
@@ -70,7 +73,7 @@
     .members-pictures {
         /* margin-top: 3rem; */
         margin-left: 1rem;
-        width: 90%;
+        width: 100%;
     }
     .members-next-container {
         width: 100%;
@@ -115,5 +118,12 @@
         height: auto;
         margin-left: -10rem;
         margin-top: 2.5rem;
+    }
+    .employee-svg {
+        width: 22.5%;
+        /* set overlap side */
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        
     }
 }

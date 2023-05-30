@@ -10,8 +10,8 @@
     margin-left: 15rem;
     margin-right: 5rem;
 }
-.members-2-pictures {
-    width: 35rem;
+.members-pictures {
+    width: 40rem;
     height: auto;
     margin-left: -5rem;
     margin-top: 1rem;
@@ -55,6 +55,10 @@
 .members-2-container-mobile {
     display: none;
 }
+.employee-svg {
+    width: 6.5rem;
+    height: auto;
+}
 @media only screen and (max-width: 768px) {
     .members-2-container {
         width: 100%;
@@ -75,9 +79,9 @@
         justify-self: start;
         margin-top: -1rem;
     }
-    .members-2-pictures {
-        margin-left: 0.5rem;
-        width: 90%;
+    .members-pictures {
+        margin-left: 0.7rem;
+        width: 100%;
     }
     .members-2-prev-container {
         width: 100%;
@@ -101,7 +105,7 @@
     }
     .members-2-graphic {
         margin-right: -1rem;
-        width: 75%;
+        width: 70%;
         height: auto;
         align-self: flex-end;
         z-index: 1;
@@ -115,8 +119,8 @@
         display: block;
         width: 40%;
         height: auto;
-        margin-top: -15rem;
-        margin-bottom: 2rem;
+        margin-top: -12rem;
+        margin-bottom: 3rem;
         margin-left: 10rem;
     }
     .members-2-prev-mobile {
@@ -124,7 +128,7 @@
         width: 7.5rem;
         height: auto;
         margin-left: -1.5rem;
-        margin-top:-11rem;
+        margin-top:-9rem;
     }
     .members-2-container {
         display: none;
@@ -137,5 +141,11 @@
         /* flex-direction: column; */
         /* justify-content: center; */
         align-items: center;
+    }
+    .employee-svg {
+        width: 22.5%;
+        /* set overlap side */
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
     }
 }
