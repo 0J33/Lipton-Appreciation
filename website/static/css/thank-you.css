@@ -15,3 +15,22 @@
     /* make the button in front of the image */
     z-index: 1;
 }
+
+@media only screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .thank-you  {
+        margin-right: 1rem;
+        height: 80%;
+        width: auto;
+        align-self: center;
+        justify-self: center;
+    }
+    .button {
+
+    }
+}
