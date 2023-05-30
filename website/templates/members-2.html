@@ -2,6 +2,63 @@
 
 {% block content %}
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/members-2.css') }}">
+
+    <div class="members-2-container">
+        
+        <div class="graphic-container-2">
+            
+            <a href="/members" class="members-2-prev-container">
+                <img src="{{ url_for('static', filename='res/img/prev-page.svg') }}" alt="" class="members-2-prev-mobile">
+            </a>
+            
+            <img src="{{ url_for('static', filename='res/img/members-graphic-2.svg') }}" alt="" class="members-2-graphic">
+            
+            <a href="/members" class="members-2-prev-container">
+                <img src="{{ url_for('static', filename='res/img/prev-page.svg') }}" alt="" class="members-2-prev">
+            </a>
+            
+        </div>
+        
+        <div class="members-2">
+
+            <img src="{{ url_for('static', filename='res/img/members-title.svg') }}" alt="" class="members-2-title">
+            
+            <img src="{{ url_for('static', filename='res/img/members-title.svg') }}" alt="" class="members-2-title-mobile">
+
+            <img src="{{ url_for('static', filename='res/employees/employees-2.svg') }}" alt="" class="members-2-pictures">
+            
+        </div>
+        
+    </div>
     
+    <div class="members-2-container-mobile">
+
+        <div class="members-2">
+
+            <img src="{{ url_for('static', filename='res/img/members-title.svg') }}" alt="" class="members-2-title-mobile">
+
+            <img src="{{ url_for('static', filename='res/employees/employees-2.svg') }}" alt="" class="members-2-pictures">
+
+            
+        </div>
+        
+        <div class="graphic-container-2-mobile">
+
+            <img src="{{ url_for('static', filename='res/img/members-title.svg') }}" alt="" class="members-2-title">
+            
+            <a href="/members" class="members-2-prev-container">
+                <img src="{{ url_for('static', filename='res/img/prev-page.svg') }}" alt="" class="members-2-prev-mobile">
+            </a>
+            
+            <img src="{{ url_for('static', filename='res/img/members-graphic-2.svg') }}" alt="" class="members-2-graphic">
+
+            <a href="/members" class="members-2-prev-container">
+                <img src="{{ url_for('static', filename='res/img/prev-page.svg') }}" alt="" class="members-2-prev">
+            </a>
+            
+        </div>
+
+    </div>
 
 {% endblock %}
