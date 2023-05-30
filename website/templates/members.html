@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/members.css') }}">
+
+    <div class="members-container">
+
+        <div class="members">
+
+            <img src="{{ url_for('static', filename='res/img/members-title.svg') }}" alt="" class="members-title-mobile">
+
+            <img src="{{ url_for('static', filename='res/employees/employees-1.svg') }}" alt="" class="members-pictures">
+
+            
+        </div>
+        
+        <div class="graphic-container">
+
+            <img src="{{ url_for('static', filename='res/img/members-title.svg') }}" alt="" class="members-title">
+            
+            <a href="/members-2" class="members-next-container">
+                <img src="{{ url_for('static', filename='res/img/next-page.svg') }}" alt="" class="members-next-mobile">
+            </a>
+            
+            <img src="{{ url_for('static', filename='res/img/members-graphic-1.svg') }}" alt="" class="members-graphic">
+
+            <a href="/members-2" class="members-next-container">
+                <img src="{{ url_for('static', filename='res/img/next-page.svg') }}" alt="" class="members-next">
+            </a>
+            
+        </div>
+
+    </div>
+
+{% endblock %}

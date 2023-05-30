@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "Myriad Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Regular"), url("fonts/MYRIADPRO-REGULAR.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Condensed";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Condensed"), url("fonts/MYRIADPRO-COND.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Condensed Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Condensed Italic"),
+    url("fonts/MYRIADPRO-CONDIT.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Light"), url("fonts/MyriadPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Semibold"),
+    url("fonts/MYRIADPRO-SEMIBOLD.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Semibold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Semibold Italic"),
+    url("fonts/MYRIADPRO-SEMIBOLDIT.woff") format("woff");
+}
+
+@font-face {
+  font-family: "fonts/Myriad Pro Bold Condensed";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold Condensed"),
+    url("fonts/MYRIADPRO-BOLDCOND.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold"), url("fonts/MYRIADPRO-BOLD.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold Italic"),
+    url("fonts/MYRIADPRO-BOLDIT.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Bold Condensed Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold Condensed Italic"),
+    url("fonts/MYRIADPRO-BOLDCONDIT.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Avenir Next LT Pro Regular"),
+    url("fonts/AVENIR NEXT LT PRO REGULAR.OTF") format("otf");
+}
+
+/* Scrollbar styles for Chrome and Safari */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 12px 12px #ffd95b;
+  /* border: solid 3px transparent; */
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 12px 12px black;
+  border: solid 3.5px transparent;
+  border-radius: 10px;
+  height: 20%;
+}
+
+/* Scrollbar styles for Firefox */
+/* Note: Firefox does not support customizing the scrollbar appearance */
+
+/* Scrollbar styles for IE and Edge */
+::-ms-scrollbar {
+  width: 12px;
+}
+
+::-ms-scrollbar-track {
+  box-shadow: inset 0 0 12px 12px #ffd95b;
+  /* border: solid 3px transparent; */
+}
+
+::-ms-scrollbar-thumb {
+  box-shadow: inset 0 0 12px 12px black;
+  border: solid 3.5px transparent;
+  border-radius: 10px;
+  height: 20%;
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  width: 35%;
+  height: auto;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.body {
+  background-color: #FFD95A;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+html, body, section {
+  overflow: hidden;
+}
+
+html, body, .body, .container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .body {
+    width: 100%;
+    overflow: hidden;
+  }
+  .logo {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    height: auto;
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+}

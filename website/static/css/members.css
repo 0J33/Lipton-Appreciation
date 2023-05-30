@@ -1,0 +1,118 @@
+.members-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.members {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7.5rem;
+    margin-left: 15rem;
+}
+.members-pictures {
+    width: 35rem;
+    height: auto;
+    margin-left: -5rem;
+    margin-top: 1rem;
+}
+.members-next {
+    display: block;
+    width: 10rem;
+    height: auto;
+    margin-left: 10rem;
+    margin-top: 1rem;
+}
+.graphic-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+}
+.members-graphic {
+    margin-top: 2rem;
+    margin-right: 10rem;
+    height: 20rem;
+    margin-bottom: 2.5rem;
+    width: auto;
+}
+.members-title {
+    display: block;
+    width: 20rem;
+    height: auto;
+    z-index: 1;
+    margin-top: 2.5rem
+}
+.members-title-mobile {
+    display: none;
+}
+.members-next-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .members-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .members {
+        margin-left: 0rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .members-pictures {
+        /* margin-top: 3rem; */
+        margin-left: 1rem;
+        width: 90%;
+    }
+    .members-next-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left:-10rem
+    }
+    .members-next {
+        display: none;
+    }
+    .graphic-container {
+        width: 125%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .members-graphic {
+        margin-right: 5rem;
+        width: 40%;
+        height: auto;
+        align-self: flex-end;
+    }
+    .members-title {
+        display: none;
+    }
+    .members-title-mobile {
+        display: block;
+        width: 40%;
+        height: auto;
+        margin-top: -16rem;
+        margin-bottom: 2rem;
+        margin-left: 10rem;
+    }
+    .members-next-mobile {
+        display: block;
+        width: 7.5rem;
+        height: auto;
+        margin-left: -2.5rem;
+        margin-top: -15rem;
+    }
+}
