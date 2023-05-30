@@ -1,14 +1,14 @@
 .members-2-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 .members-2 {
     display: flex;
     flex-direction: column;
     margin-top: 10rem;
     margin-left: 15rem;
-    margin-right: 2.5rem;
+    margin-right: 5rem;
 }
 .members-2-pictures {
     width: 35rem;
@@ -23,18 +23,18 @@
     margin-left: 10rem;
     margin-top: 1rem;
 }
-.graphic-container {
+.graphic-container-2 {
     display: flex;
     flex-direction: column;
-    justify-content: right;
-    align-items: right;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .members-2-graphic {
     margin-top: 7.5rem;
-    margin-right: 10rem;
+    margin-right: -3.5rem;
     height: 20rem;
     margin-bottom: 2.5rem;
-    margin-left: 5rem;
+    margin-left: 7.5rem;
     width: auto;
 }
 .members-2-title {

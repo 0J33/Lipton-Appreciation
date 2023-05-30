@@ -26,7 +26,6 @@
     display: flex;
     flex-direction: column;
     justify-content: right;
-    align-items: right;
 }
 .members-graphic {
     margin-top: 2rem;
