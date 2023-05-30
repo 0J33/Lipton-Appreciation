@@ -30,8 +30,9 @@ def home():
 
 messages_view = Blueprint('messages_view', __name__)
 
-@messages_view.route('/firstname-lastname', methods=['GET', 'POST'])
-@messages_view.route('/firstname2-lastname2', methods=['GET', 'POST'])
+# first name last name random 5 digits
+@messages_view.route('/abdelrahman-elnouty-21765', methods=['GET', 'POST'])
+@messages_view.route('/abdelrahman-elsharabasy-89432', methods=['GET', 'POST'])
 def home():
     return render_template('messages.html')
 
