@@ -60,24 +60,25 @@
     .members-2-container {
         width: 100%;
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: grid;
+        justify-content: space-between;
         align-items: center;
     }
     .members-2 {
-        margin-left: 1.75rem;
+        margin-left: 0rem;
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        margin-top: 14rem;
+        align-self: end;
+        justify-self: start;
+        margin-top: 27.5rem;
     }
     .members-2-pictures {
         /* margin-top: 3rem; */
-        margin-left: 1rem;
+        margin-left: 5rem;
         width: 90%;
     }
     .members-2-prev-container {
@@ -115,18 +116,14 @@
         height: auto;
         margin-top: -17rem;
         margin-bottom: 2rem;
-        margin-left: 10rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        margin-left: 15rem;
     }
     .members-2-prev-mobile {
         display: block;
         width: 7.5rem;
         height: auto;
-        margin-left: 7.5rem;
-        margin-top: -3.5rem;
+        margin-left: -1.5rem;
+        margin-top:2.5rem;
     }
     .members-2-container {
         display: none;

@@ -53,9 +53,8 @@
     .members-container {
         width: 100%;
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: grid;
+        justify-content: space-between;
         align-items: center;
     }
     .members {
@@ -64,8 +63,10 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content:flex-end;
         align-items: center;
+        align-self: end;
+        justify-self: start;
     }
     .members-pictures {
         /* margin-top: 3rem; */
@@ -104,7 +105,7 @@
         display: block;
         width: 40%;
         height: auto;
-        margin-top: -16rem;
+        margin-top: -5rem;
         margin-bottom: 2rem;
         margin-left: 10rem;
     }
@@ -112,7 +113,7 @@
         display: block;
         width: 7.5rem;
         height: auto;
-        margin-left: -2.5rem;
-        margin-top: -15rem;
+        margin-left: -10rem;
+        margin-top: 2.5rem;
     }
 }
