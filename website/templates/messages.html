@@ -6,16 +6,18 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', function() {
-            var textContainers = document.querySelectorAll('.text-container');
-            textContainers.forEach(function(container) {
-                var text = container.querySelector('.text');
-                var seeMore = container.querySelector('.see-more');
-                if (text.scrollHeight > text.offsetHeight) {
-                    seeMore.style.display = 'block';
-                } else {
-                    seeMore.style.display = 'none';
-                }
-            });
+            if (window.innerWidth >= 768) {
+                var textContainers = document.querySelectorAll('.text-container');
+                textContainers.forEach(function(container) {
+                    var text = container.querySelector('.text');
+                    var seeMore = container.querySelector('.see-more');
+                    if (text.scrollHeight > text.offsetHeight) {
+                        seeMore.style.display = 'block';
+                    } else {
+                        seeMore.style.display = 'none';
+                    }
+                });
+            }
         });
         function expand(url, sender, message) {
             window.location.href = '/expand?url=' + url + '&sender=' + sender + '&message=' + message;

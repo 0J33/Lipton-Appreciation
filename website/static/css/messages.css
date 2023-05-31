@@ -74,3 +74,34 @@
     bottom: 0;
     right: 0;
 }
+
+@media only screen and (max-width: 768px) {
+    .messages-title {
+        width: 10rem;
+        top: 2rem;
+        right: 2rem;
+    }
+    .messages-graphic {
+        width: 10rem;
+    }
+    .messages {
+        margin-top: 5rem;
+        margin-left: 4rem;
+        height: 65%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .message-svg {
+        width: 17.5rem;
+    }
+    .sender {
+        margin-top: -7.5rem;
+    }
+    .text {
+        width: 13rem;
+        height: 4.5rem;
+        overflow: auto;
+    }
+    .see-more {
+        display: none;
+    }
+}
