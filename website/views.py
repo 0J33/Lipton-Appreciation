@@ -88,8 +88,11 @@ def home():
     name = request.path.split("/")[-1]
     name = name.replace("_", " ").title()
     name = name[:-5].strip()
-    if name[9] == "B":
-        name = name.replace("B", "b")
+    try:
+        if name[9] == "B":
+            name = name.replace("B", "b")
+    except:
+        pass
     messages = []
     try:
         data = read_gist(GH_GIST_ID, "lipton_appreciation")
