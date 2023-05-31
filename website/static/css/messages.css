@@ -1,0 +1,73 @@
+.container {
+    font-family: 'Myriad Pro Regular';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.messages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-left: 5rem;
+    margin-top: 10rem;
+    width: 190rem;
+    height: 70%;
+    overflow-x: hidden;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.message-svg {
+    margin: 0 auto;
+    width: 15rem;
+}
+
+.sender {
+    font-weight: bold;
+    margin-top: -6.5rem;
+}
+
+.text-container {
+    position: relative;
+}
+
+.text {
+    margin-top: -0.75rem;
+    width: 10rem;
+    height: 2.5rem;
+    overflow: hidden;
+}
+
+.see-more {
+    margin-top: -1rem;
+    opacity: 0.5;
+}
+.graphic-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.messages-title {
+    display: block;
+    width: 20rem;
+    height: auto;
+    position: fixed;
+    top: 3rem;
+    right: 5rem;
+
+}
+.messages-graphic {
+    width: 20rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

@@ -4,6 +4,40 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/messages.css') }}">
 
-    
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var textContainers = document.querySelectorAll('.text-container');
+            textContainers.forEach(function(container) {
+                var text = container.querySelector('.text');
+                var seeMore = container.querySelector('.see-more');
+                if (text.scrollHeight > text.offsetHeight) {
+                    seeMore.style.display = 'block';
+                } else {
+                    seeMore.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <div class="messages">
+        {% for message in messages %}
+            <div class="message">
+                <img src="{{ url_for('static', filename='res/img/message-box.svg') }}" alt="" class="message-svg">
+                <p class="sender">{{ message[0] }}</p>
+                <div class="text-container">
+                    <p class="text">{{ message[1] }}</p>
+                    <p class="see-more">more...</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="graphic-container">
+
+        <img src="{{ url_for('static', filename='res/img/messages-title.svg') }}" alt="" class="messages-title">
+
+        <img src="{{ url_for('static', filename='res/img/messages-graphic.svg') }}" alt="" class="messages-graphic">
+        
+    </div>
 
 {% endblock %}
