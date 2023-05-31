@@ -71,7 +71,7 @@ messages_view = Blueprint('messages_view', __name__)
 @messages_view.route('/mohamed_gamal_31245', methods=['GET', 'POST'])
 @messages_view.route('/mohamed_helmy_87930', methods=['GET', 'POST'])
 @messages_view.route('/mohamed_khamis_50413', methods=['GET', 'POST'])
-@messages_view.route('/mohamed-mandour_17246', methods=['GET', 'POST'])
+@messages_view.route('/mohamed_mandour_17246', methods=['GET', 'POST'])
 @messages_view.route('/mohamed_ramadan_69830', methods=['GET', 'POST'])
 @messages_view.route('/mohamed_yassin_35492', methods=['GET', 'POST'])
 @messages_view.route('/mohammed_balbaa_60783', methods=['GET', 'POST'])
@@ -88,6 +88,9 @@ def home():
     name = request.path.split("/")[-1]
     name = name.replace("_", " ").title()
     name = name[:-5].strip()
+    print(name)
+    if name[9] == "B":
+        name = name.replace("B", "b")
     messages = []
     try:
         data = read_gist(GH_GIST_ID, "lipton_appreciation")

@@ -16,6 +16,12 @@ div {
     width: 10rem;
     height: auto;
 }
+.send-title {
+    width: 20rem;
+    position: absolute;
+    top: -27.5rem;
+    right: -4rem;
+}
 .name-input {
     font-family: 'Myriad Pro Regular';
     width: 10rem;
