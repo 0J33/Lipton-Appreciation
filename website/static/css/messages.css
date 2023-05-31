@@ -46,10 +46,33 @@
     word-wrap: break-word;
 }
 
+.text-container.scrollable .text {
+    overflow-y: scroll;
+}
+
 .see-more {
     margin-top: -1rem;
     opacity: 0.5;
+    display: none;
 }
+
+.text-container.scrollable .see-more {
+    display: block;
+}
+
+.arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: -1.5rem;
+    top: -1rem;
+    display: none;
+}
+
+.text-container.scrollable .arrow {
+    display: block;
+}
+
 .see-more:hover {
     cursor: pointer;
 }
@@ -75,7 +98,6 @@
     bottom: 0;
     right: 0;
 }
-
 @media only screen and (max-width: 768px) {
     .messages-title {
         width: 10rem;
@@ -105,5 +127,8 @@
     }
     .see-more {
         display: none;
+    }
+    .text-container.scrollable .arrow {
+        display: block;
     }
 }

@@ -6,23 +6,32 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', function() {
-            if (window.innerWidth >= 768) {
-                var textContainers = document.querySelectorAll('.text-container');
-                textContainers.forEach(function(container) {
-                    var text = container.querySelector('.text');
-                    var seeMore = container.querySelector('.see-more');
-                    if (text.scrollHeight > text.offsetHeight) {
+            var textContainers = document.querySelectorAll('.text-container');
+            textContainers.forEach(function(container) {
+                var text = container.querySelector('.text');
+                var seeMore = container.querySelector('.see-more');
+                var arrow = container.querySelector('.arrow');
+                if (text.scrollHeight > text.offsetHeight) {
+                    if (window.innerWidth > 768) {
                         seeMore.style.display = 'block';
+                        arrow.style.display = 'none';
+                        container.classList.remove('scrollable');
                     } else {
+                        arrow.style.display = 'block';
                         seeMore.style.display = 'none';
+                        container.classList.add('scrollable');
                     }
-                });
-            }
+                } else {
+                    arrow.style.display = 'none';
+                    seeMore.style.display = 'none';
+                    container.classList.remove('scrollable');
+                }
+            });
         });
         function expand(url, sender, message) {
             window.location.href = '/expand?url=' + url + '&sender=' + sender + '&message=' + message;
         }
-    </script>
+    </script>       
 
     <div class="messages">
         {% for message in messages %}
@@ -32,6 +41,7 @@
                 <div class="text-container">
                     <p class="text">{{ message[1] }}</p>
                     <p class="see-more" onclick="expand('{{ request.url.split("/")[-1] }}', '{{ message[0] }}', '{{ message[1] }}')">more...</p>
+                    <img src="{{ url_for('static', filename='res/img/arrow.svg') }}" alt="" class="arrow">
                 </div>
             </div>
         {% endfor %}

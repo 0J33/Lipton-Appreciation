@@ -16,12 +16,6 @@ div {
     width: 10rem;
     height: auto;
 }
-.send-title {
-    width: 20rem;
-    position: absolute;
-    top: -27.5rem;
-    right: -4rem;
-}
 .name-input {
     font-family: 'Myriad Pro Regular';
     width: 10rem;
@@ -104,12 +98,6 @@ div {
         position: absolute;
         top: 9rem;
         z-index: 0;
-    }
-    .send-title {
-        width: 10rem;
-        position: absolute;
-        top: -33rem;
-        right: -6rem; 
     }
     .left {
         display:flex;
