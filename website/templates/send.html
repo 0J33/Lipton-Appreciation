@@ -19,44 +19,22 @@
         }
     </script>
 
-    <style>
-        div {
-            font-family: 'Myriad Pro Regular';
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-
-    <div style="display:flex;justify-content:row;align-items:center;flex-direction:column;">
-        <img src="{{ url_for('static', filename='res/employees/svg/' ~ recipient.lower().replace('_', '-') ~ '.svg') }}" alt="" style="width: 200px; height: 200px; margin-top: 50px;">
+    <div class="left">
+        <img src="{{ url_for('static', filename='res/employees/svg/' ~ recipient.lower().replace('_', '-') ~ '.svg') }}" alt="" class="recipient">
+        <p>Leave {{ recipient.title().split("_")[0] }} a message</p>
+        <img src="{{ url_for('static', filename='res/img/name-box.svg') }}" alt="" class="name-box">
+        <input type="text" id="sender" name="sender" placeholder="" class="name-input">
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div>
-                <h1>Send a message to {{ recipient.replace("_", " ") }}</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div>
-                <label for="sender">Your name</label>
-                <input type="text" id="sender" name="sender" placeholder="Your name" class="form-control">
-            </div>
-        </div>
-        <div class="row">
-            <div>
-                <label for="message">Your message</label>
-                <textarea id="message" name="message" placeholder="Your message" class="form-control"></textarea>
-            </div>
-        </div>
-        <div class="row">
-            <div>
-                <button onclick="send_message('{{ recipient }}')" class="btn btn-primary">Send message</button>
-            </div>
-        </div>
+    <div class="mid">
+        <img src="{{ url_for('static', filename='res/img/message-graphic.svg') }}" alt="" class="message-graphic">
+        <textarea id="message" name="message" placeholder="" class="message-input"></textarea>
+    </div>
+
+    <div class="right">
+        <button onclick="send_message('{{ recipient }}')" class="submit-button">
+            <img src="{{ url_for('static', filename='res/img/submit.svg') }}" alt="" class="submit">
+        </button>
+    </div>
 
 {% endblock %}

@@ -101,6 +101,13 @@ def home():
         pass
     return render_template('messages.html', messages=messages)
 
+@messages_view.route('/expand', methods=['GET', 'POST'])
+def expand():
+    url = "/" + request.args.get('url')
+    sender = request.args.get('sender')
+    message = request.args.get('message')
+    return render_template('message.html',url=url, sender=sender, message=message)
+
 thank_you_view = Blueprint('thank_you_view', __name__)
 
 @thank_you_view.route('/thank-you', methods=['GET', 'POST'])

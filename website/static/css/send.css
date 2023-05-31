@@ -1,0 +1,76 @@
+div {
+    font-family: 'Myriad Pro Regular';
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.submit-button {
+    background: transparent;
+    border: none;
+}
+.submit {
+    display: block;
+    width: 10rem;
+    height: auto;
+}
+.name-input {
+    font-family: 'Myriad Pro Regular';
+    width: 10rem;
+    height: 2.5rem;
+    margin-top: -2.9rem;
+    background: transparent;
+    border: none;
+}
+.name-box {
+    width: 12rem;
+}
+.message-input {
+    font-family: 'Myriad Pro Regular';
+    background: transparent;
+    border: none;
+    resize: none;
+    position: absolute;
+    top: 62%;
+    width: 25rem;
+    height: 25%;
+}
+.left {
+    display:flex;
+    justify-content:column;
+    align-items:center;
+    flex-direction:column;
+    position: absolute;
+    top: 7.5rem;
+    left: 5rem;
+}
+.mid {
+    height: 100%;
+    width: auto;
+    display:flex;
+    justify-content:column;
+    align-items:center;
+    flex-direction:column;
+    position: absolute;
+}
+.message-graphic {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    z-index: -1;
+}
+.right {
+    display:flex;
+    justify-content:column;
+    align-items:center;
+    flex-direction:column;
+    position: absolute;
+    top: 30rem;
+    right: 7.5rem;
+}
+.recipient {
+    width: 7.5rem;
+    height: 7.5rem;
+}

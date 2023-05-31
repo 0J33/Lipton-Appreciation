@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/messages.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/message.css') }}">
 
     <script>
         window.addEventListener('DOMContentLoaded', function() {
@@ -17,23 +17,21 @@
                 }
             });
         });
-        function expand(url, sender, message) {
-            window.location.href = '/expand?url=' + url + '&sender=' + sender + '&message=' + message;
-        }
     </script>
 
     <div class="messages">
-        {% for message in messages %}
-            <div class="message">
-                <img src="{{ url_for('static', filename='res/img/message-box.svg') }}" alt="" class="message-svg">
-                <p class="sender">{{ message[0] }}</p>
-                <div class="text-container">
-                    <p class="text">{{ message[1] }}</p>
-                    <p class="see-more" onclick="expand('{{ request.url.split("/")[-1] }}', '{{ message[0] }}', '{{ message[1] }}')">more...</p>
-                </div>
+        <div class="message">
+            <img src="{{ url_for('static', filename='res/img/message-box.svg') }}" alt="" class="message-svg">
+            <p class="sender">{{ sender }}</p>
+            <div class="text-container">
+                <p class="text">{{ message }}</p>
             </div>
-        {% endfor %}
+        </div>
     </div>
+
+    <a href="{{ url }}" class="back-container">
+        <img src="{{ url_for('static', filename='res/img/back.svg') }}" alt="" class="back">
+    </a>
 
     <div class="graphic-container">
 
