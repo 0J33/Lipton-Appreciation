@@ -99,7 +99,8 @@
     .text {
         width: 13rem;
         height: 4.5rem;
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
     .see-more {
         display: none;
