@@ -40,7 +40,7 @@ div {
     resize: none;
     position: absolute;
     top: 62%;
-    width: 25rem;
+    width: 32.5%;
     height: 25%;
 }
 .left {
@@ -54,7 +54,7 @@ div {
 }
 .mid {
     height: 100%;
-    width: auto;
+    width: 100%;
     display:flex;
     justify-content:column;
     align-items:center;
