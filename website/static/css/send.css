@@ -29,6 +29,7 @@ div {
     margin-top: -2.9rem;
     background: transparent;
     border: none;
+    z-index: 1;
 }
 .name-box {
     width: 12rem;
@@ -40,8 +41,9 @@ div {
     resize: none;
     position: absolute;
     top: 62%;
-    width: 32.5%;
+    width: 30%;
     height: 25%;
+    z-index: 1;
 }
 .left {
     display:flex;
@@ -60,12 +62,13 @@ div {
     align-items:center;
     flex-direction:column;
     position: absolute;
+    z-index: 0;
 }
 .message-graphic {
     height: 100%;
     width: auto;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
 }
 .right {
     display:flex;
