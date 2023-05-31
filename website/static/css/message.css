@@ -43,6 +43,7 @@
     width: 25rem;
     height: 10rem;
     overflow: auto;
+    word-wrap: break-word;
 }
 
 .see-more {
