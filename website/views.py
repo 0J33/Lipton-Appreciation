@@ -89,7 +89,7 @@ def home():
     name = name.replace("_", " ").title()
     name = name[:-5].strip()
     try:
-        if name[9] == "B":
+        if name[9] == "B" and name[0] != "M":
             name = name.replace("B", "b")
     except:
         pass

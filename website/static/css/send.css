@@ -32,6 +32,7 @@ div {
     z-index: 1;
 }
 .name-box {
+    display: block;
     width: 12rem;
 }
 .message-input {
@@ -47,7 +48,7 @@ div {
 }
 .left {
     display:flex;
-    justify-content:column;
+    justify-content:center;
     align-items:center;
     flex-direction:column;
     position: absolute;
@@ -65,10 +66,14 @@ div {
     z-index: 0;
 }
 .message-graphic {
+    display: block;
     height: 100%;
     width: auto;
     position: absolute;
     z-index: 0;
+}
+.message-graphic-mobile {
+    display: none;
 }
 .right {
     display:flex;
@@ -85,5 +90,70 @@ div {
 }
 
 @media only screen and (max-width: 768px) {
-
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .message-graphic {
+        display: none;
+    }
+    .message-graphic-mobile {
+        display: block;
+        position: absolute;
+        top: 9rem;
+        z-index: 0;
+    }
+    .send-title {
+        width: 10rem;
+        position: absolute;
+        top: -33rem;
+        right: -6rem; 
+    }
+    .left {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        position: absolute;
+        top: 4.5rem;
+        left: 8rem;
+    }
+    .right {
+        display:flex;
+        justify-content:column;
+        align-items:center;
+        flex-direction:column;
+        position: absolute;
+        top: 35rem;
+    }
+    .submit {
+        width: 7.5rem;
+        position: absolute;
+        right: -6rem;
+        top: 2rem;
+    }
+    .name-box {
+        display: none;
+    }
+    .send-text {
+        position: absolute;
+        top: 6rem;
+        width: 20rem;
+        text-align: center;
+    }
+    .message-input {
+        position: absolute;
+        top: 29rem;
+        width: 70%;
+        height: 4rem;
+        z-index: 1;
+    }
+    .name-input {
+        position: absolute;
+        top: 10rem;
+        height: 1.5rem;
+        z-index: 1;
+    }
 }
