@@ -152,8 +152,9 @@ div {
     }
     .name-input {
         position: absolute;
-        top: 10rem;
+        top: 14.5rem;
         height: 1.5rem;
+        width: 16rem;
         z-index: 1;
     }
 }
