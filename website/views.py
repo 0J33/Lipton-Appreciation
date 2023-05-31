@@ -83,7 +83,7 @@ messages_view = Blueprint('messages_view', __name__)
 @messages_view.route('/rana_ossama_82146', methods=['GET', 'POST'])
 @messages_view.route('/tamer_fares_43609', methods=['GET', 'POST'])
 @messages_view.route('/wasim_magdy_29056', methods=['GET', 'POST'])
-@messages_view.route('/yomna_el-raghby_71943', methods=['GET', 'POST'])
+@messages_view.route('/yomna_el-raghy_71943', methods=['GET', 'POST'])
 def home():
     name = request.path.split("/")[-1]
     name = name.replace("_", " ").title()
