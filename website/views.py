@@ -106,7 +106,7 @@ def home():
             if name in message.split("/////")[0]:
                 message = message.strip()
                 message = message.split("/////")
-                messages.append([message[1], message[2]])
+                messages.append([message[1], message[2].replace("'", "").replace('´', '')])
     except:
         pass
     return render_template('messages.html', messages=messages)
