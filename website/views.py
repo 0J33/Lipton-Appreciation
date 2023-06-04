@@ -93,6 +93,11 @@ def home():
             name = name.replace("B", "b")
     except:
         pass
+    try:
+        if name.startswith("Rana"):
+            name = "Rana El-Ragabany"
+    except:
+        pass
     messages = []
     try:
         data = read_gist(GH_GIST_ID, "lipton_appreciation")
