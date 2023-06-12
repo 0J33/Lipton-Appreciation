@@ -12,9 +12,13 @@
                 fetch('/send_message?recipient=' + recipient + '&sender=' + sender + '&message=' + message)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);    
+                    //data is string "success" or "error"
+                    if (data['message'] == "success") {
+                        window.location.href = "/thank-you";
+                    } else {
+                        alert("Your message was not sent. Please try again.");
+                    }
                 });
-                window.location.href = "/thank-you";
             }
         }
     </script>

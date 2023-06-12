@@ -16,6 +16,9 @@ div {
     width: 10rem;
     height: auto;
 }
+.submit:hover {
+    cursor: pointer;
+}
 .name-input {
     font-family: 'Myriad Pro Regular';
     width: 10rem;

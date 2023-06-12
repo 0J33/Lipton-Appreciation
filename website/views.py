@@ -38,9 +38,11 @@ def send_message():
         content = recipient + "/////" + sender + "/////" + message + "\n"
         old = read_gist(GH_GIST_ID, "lipton_appreciation")
         update_gist(old + content, GH_GIST_ID, "lipton_appreciation")
-        return "success"
+        response_data = {'message': 'success'}
+        return json.dumps(response_data)
     except:
-        return "error"
+        response_data = {'message': 'error'}
+        return json.dumps(response_data)
 
 messages_view = Blueprint('messages_view', __name__)
 
