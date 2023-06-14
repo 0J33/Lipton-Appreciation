@@ -37,7 +37,10 @@ def send_message():
         message = request.args.get('message')
         content = recipient + "/////" + sender + "/////" + message + "\n"
         old = read_gist(GH_GIST_ID, "lipton_appreciation")
-        update_gist(old + content, GH_GIST_ID, "lipton_appreciation")
+        if content in old:
+            return json.dumps({'message': 'duplicate'})
+        else:
+            update_gist(old + content, GH_GIST_ID, "lipton_appreciation")
         response_data = {'message': 'success'}
         return json.dumps(response_data)
     except:

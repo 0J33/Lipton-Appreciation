@@ -12,8 +12,7 @@
                 fetch('/send_message?recipient=' + recipient + '&sender=' + sender + '&message=' + message)
                 .then(response => response.json())
                 .then(data => {
-                    //data is string "success" or "error"
-                    if (data['message'] == "success") {
+                    if (data['message'] == "success") or (data['message'] == "duplicate") {
                         window.location.href = "/thank-you";
                     } else {
                         alert("Your message was not sent. Please try again.");
