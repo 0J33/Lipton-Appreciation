@@ -17,21 +17,29 @@ db = client[db_name]
 collection = db[collection_name]
 
 def insert(collection, recipient, sender, message):
-    # Insert a document
-    document = {'recipient': recipient, 'sender': sender, 'message': message}
-    collection.insert_one(document)
+    # Check if the recipient document exists
+    existing_document = collection.find_one({'recipient': recipient})
 
-def get_all(collection, recipient):
-    # Query documents
-    result = collection.find({'recipient': recipient})
-    res = []
-    for document in result:
-        res.append(document)
-    return res
+    if existing_document:
+        # Append the sender and message to the existing document's 'messages' attribute
+        collection.update_one(
+            {'_id': existing_document['_id']},
+            {'$push': {'messages': {'sender': sender, 'message': message}}}
+        )
+    else:
+        # Create a new document and append the sender and message
+        document = {
+            'recipient': recipient,
+            'messages': [{'sender': sender, 'message': message}]
+        }
+        collection.insert_one(document)
 
 def get_messages(collection, recipient):
-    documents = get_all(collection, recipient)
-    res = []
-    for document in documents:
-        res.append([document['sender'], document['message']])
-    return res
+    recipient_document = collection.find_one({'recipient': recipient})
+
+    if recipient_document:
+        # Access the 'messages' attribute and convert it to a list of lists
+        messages = recipient_document.get('messages', [])
+        return [[message['sender'], message['message']] for message in messages]
+    else:
+        return []
