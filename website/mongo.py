@@ -3,9 +3,9 @@ from pymongo import MongoClient
 try:
     from .env import *
 except:
-    connection_string = os.getenv('connection_string')
-    db_name = os.getenv('db_name')
     collection_name = os.getenv('collection_name')
+    db_name = os.getenv('db_name')
+    connection_string = os.getenv('connection_string')
     
 # Establish a connection to the MongoDB server
 client = MongoClient(connection_string)
@@ -17,7 +17,6 @@ db = client[db_name]
 collection = db[collection_name]
 
 def insert(collection, recipient, sender, message):
-    print(recipient, sender, message)
     # Insert a document
     document = {'recipient': recipient, 'sender': sender, 'message': message}
     collection.insert_one(document)
