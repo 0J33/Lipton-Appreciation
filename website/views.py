@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template, request, flash, jsonify
-from . import db
 import json
-from .git_func import *
+from .mongo import *
 
 home_view = Blueprint('home_view', __name__)
 
@@ -35,12 +34,10 @@ def send_message():
         recipient = recipient.replace("_", " ")
         sender = request.args.get('sender')
         message = request.args.get('message')
-        content = recipient + "/////" + sender + "/////" + message + "\n"
-        old = read_gist(GH_GIST_ID, "lipton_appreciation")
-        if content in old:
+        if [sender, message] in get_messages(collection, recipient):
             return json.dumps({'message': 'duplicate'})
         else:
-            update_gist(old + content, GH_GIST_ID, "lipton_appreciation")
+            insert(collection, recipient, sender, message)
         response_data = {'message': 'success'}
         return json.dumps(response_data)
     except:
@@ -105,13 +102,7 @@ def home():
         pass
     messages = []
     try:
-        data = read_gist(GH_GIST_ID, "lipton_appreciation")
-        all_messages = data.split("\n")
-        for message in all_messages:
-            if name in message.split("/////")[0]:
-                message = message.strip()
-                message = message.split("/////")
-                messages.append([message[1], message[2].replace("'", "").replace('´', '')])
+        messages = get_messages(collection, name)
     except:
         pass
     return render_template('messages.html', messages=messages)
