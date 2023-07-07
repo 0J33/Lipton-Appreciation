@@ -18,6 +18,7 @@ def create_app():
     from .views import send_view
     from .views import messages_view
     from .views import thank_you_view
+    from .views import stats_view
     
     app.register_blueprint(home_view, url_prefix='/')
     app.register_blueprint(members_view, url_prefix='/')
@@ -25,5 +26,6 @@ def create_app():
     app.register_blueprint(send_view, url_prefix='/')
     app.register_blueprint(messages_view, url_prefix='/')
     app.register_blueprint(thank_you_view, url_prefix='/')
+    app.register_blueprint(stats_view, url_prefix='/')
 
     return app

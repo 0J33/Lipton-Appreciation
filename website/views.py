@@ -119,3 +119,10 @@ thank_you_view = Blueprint('thank_you_view', __name__)
 @thank_you_view.route('/thank-you', methods=['GET', 'POST'])
 def home():
     return render_template('thank-you.html')
+
+stats_view = Blueprint('stats_view', __name__)
+
+@stats_view.route('/stats', methods=['GET', 'POST'])
+def home():
+    num_of_msgs = number_of_messages(collection)
+    return render_template('stats.html', num_of_msgs=num_of_msgs)

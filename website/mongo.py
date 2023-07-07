@@ -43,3 +43,12 @@ def get_messages(collection, recipient):
         return [[message['sender'], message['message']] for message in messages]
     else:
         return []
+    
+def delete(collection, recipient):
+    # Delete the document with the given recipient
+    collection.delete_one({'recipient': recipient})
+    
+def number_of_messages(collection):
+    # Return the number of messages in all documents in the collection (each document has attribute 'messages' which is a list of messages)
+    return sum([len(document['messages']) for document in collection.find()])
+

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:'Myriad Pro Regular';">
+        <h1>Stats:</h1>
+        <h2>Number of messages sent: {{ num_of_msgs }}</h2>
+    </div>
+
+{% endblock %}
