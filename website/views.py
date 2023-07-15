@@ -46,6 +46,7 @@ def send_message():
 
 messages_view = Blueprint('messages_view', __name__)
 
+@messages_view.route('/john_doe_00000', methods=['GET', 'POST'])
 @messages_view.route('/abdelrahman_elnouty_21765', methods=['GET', 'POST'])
 @messages_view.route('/abdelrahman_elsharabasy_89432', methods=['GET', 'POST'])
 @messages_view.route('/abdulrahman_mohamed_50612', methods=['GET', 'POST'])
