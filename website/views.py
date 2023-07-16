@@ -1,6 +1,11 @@
 from flask import Blueprint, render_template, request, flash, jsonify
 import json
 from .mongo import *
+import os
+try:
+    from .env import urls
+except:
+    urls = os.getenv('urls').replace("\n").replace("    ").replace("[", "").replace("]", "").replace("'", "").split(", ")
 
 home_view = Blueprint('home_view', __name__)
 
