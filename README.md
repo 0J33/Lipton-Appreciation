@@ -1,6 +1,6 @@
 # Lipton Appreciation
 
-### [liptonappreciation.com](https://liptonappreciation.com)
+### [liptonappreciation.com]()
 
 Lipton Appreciation is a website where Lipton employees can send messages to each other.
 
